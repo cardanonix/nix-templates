@@ -47,7 +47,7 @@
             hlint.version = "3.4.1";
             haskell-language-server.version = "1.8.0.0";
           };
-          
+
           modules = [
             {
               packages = {
@@ -84,7 +84,7 @@
               hixFlake.devShell
             ];
             buildInputs = [
-              self.packages.${system}.serve-docs
+              self.packages.x86_64-linux.serve-docs
             ];
           };
         });
