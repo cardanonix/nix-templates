@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, flake-utils, haskell-nix, CHaP, iohk-nix, ... }:
+  outputs = { self, nixpkgs, flake-utils, haskell-nix, CHaP, iohk-nix, ... }@context:
 
     flake-utils.lib.eachSystem [ "x86_64-linux" "x86_64-darwin" ] (system:
       let
@@ -35,14 +35,14 @@
         };
 
         inherit (pkgs) lib;
-
         hixProject = pkgs.haskell-nix.hix.project {
           src = ./.;
           evalSystem = "x86_64-linux";
-          inputMap = { "https://input-output-hk.github.io/cardano-haskell-packages" = inputs.CHaP; };
-          
+          inputMap = { 
+            "https://input-output-hk.github.io/cardano-haskell-packages" = CHaP; 
+          };
           shell.tools = {
-            cabal.version = "latest";
+            # cabal.version = "latest";
             hlint.version = "3.4.1";
             haskell-language-server.version = "1.8.0.0";
           };
@@ -61,7 +61,7 @@
           ];
         };
           hixFlake = hixProject.flake { };
-          serve-docs = import ./nix/serve-docs.nix inputs context {
+          serve-docs = import ./nix/serve-docs.nix context {
             inherit hixProject;
             # TODO transform additionalPkgs in excludePkgs to reduce boilerplate
             #  we could collect all entries from cabal build-depends
@@ -71,21 +71,21 @@
         in
         # Flake definition follows hello.cabal
         {
-          inherit (hixFlake) apps checks;
+          inherit (hixFlake) apps checks system;
           legacyPackages = pkgs;
 
           packages = hixFlake.packages // {
             inherit serve-docs;
           };
 
-          # devShell = pkgs.mkShell {
-          #   inputsFrom = [
-          #     hixFlake.devShell
-          #   ];
-          #   buildInputs = [
-          #     self.packages.x86_64-linux.serve-docs
-          #   ];
-          # };
+          devShell = pkgs.mkShell {
+            inputsFrom = [
+              hixFlake.devShell
+            ];
+            buildInputs = [
+              self.packages.${system}.serve-docs
+            ];
+          };
         });
 
   # --- Flake Local Nix Configuration ----------------------------
