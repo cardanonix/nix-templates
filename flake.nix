@@ -23,6 +23,13 @@
         Development shell available on `nix develop`
         Build and run the project with `nix run .#hello:exe:hello`
       '';
+      stdWelcomeText = ''
+        You just created an experimental std/paisano plutus project. . Read more about it here:
+        https://github.com/divnix/std
+
+        Development shell with `nix develop`
+        Build and run the project with `nix run .#hello:exe:hello`
+      '';
       ctlWelcomeText = ''
         You just created an cardano-transaction-lib project.
         Read more about it here: https://github.com/Plutonomicon/cardano-transaction-lib
@@ -58,11 +65,20 @@
           '';
         };
 
-        plutus_hix = {
-          path = ./plutus_hix;
+        hix-plutus = {
+          path = ./hix-plutus;
           description = "A plutus template from Lovelace Academy using hix and haskell.nix";
           welcomeText = ''
             ${hsWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        std-plutus = {
+          path = ./std-plutus;
+          description = "An experimental plutus template using haskell.nix";
+          welcomeText = ''
+            ${stdWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
