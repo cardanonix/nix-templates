@@ -1,5 +1,5 @@
 {
-  # This is a template created by `hix init`
+  # This is a template created by `iog`
   inputs = {
     nixpkgs.follows = "haskell-nix/nixpkgs-unstable";
     haskell-nix.url = "github:input-output-hk/haskell.nix";
