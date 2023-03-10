@@ -83,11 +83,11 @@
           '';
         };
 
-        std-plutus = {
-          path = ./std-plutus;
-          description = "An experimental plutus template using haskell.nix";
+        iog-plutus-starter = {
+          path = ./iog-plutus-starter;
+          description = "An IOG branch which creates a plutus template using haskell.nix";
           welcomeText = ''
-            ${stdWelcomeText}
+            ${iogWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
