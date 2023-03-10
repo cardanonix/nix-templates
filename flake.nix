@@ -33,6 +33,7 @@
     in
     {
       templates = {
+
         haskell-nix = {
           path = ./haskell-nix;
           description = "A haskell.nix template using hix";
@@ -50,7 +51,7 @@
 
         plutus-starter = {
           path = ./plutus-starter;
-          description = "A plutus template from Lovelace Academy using hix and haskell.nix";
+          description = "A plutus template using haskell.nix";
           welcomeText = ''
             ${starterWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
@@ -77,11 +78,13 @@
             Build with `nix build`
           '';
         };
+
         ctl = {
           path = ./ctl;
           description = "A minimal cardano-transaction-lib template using purs-nix";
           welcomeText = ctlWelcomeText;
         };
+
         ctl-full = {
           path = ./ctl-full;
           description = "A optioned cardano-transaction-lib template using purs-nix and webpack";
