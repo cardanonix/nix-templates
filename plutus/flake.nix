@@ -78,14 +78,14 @@
             inherit serve-docs;
           };
 
-          devShell = pkgs.mkShell {
-            inputsFrom = [
-              hixFlake.devShell
-            ];
-            buildInputs = [
-              self.packages.x86_64-linux.serve-docs
-            ];
-          };
+          # devShell = pkgs.mkShell {
+          #   inputsFrom = [
+          #     hixFlake.devShell
+          #   ];
+          #   buildInputs = [
+          #     self.packages.x86_64-linux.serve-docs
+          #   ];
+          # };
         });
 
   # --- Flake Local Nix Configuration ----------------------------
