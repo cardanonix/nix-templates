@@ -10,7 +10,7 @@
         Build and run the project with `nix run .#hello:exe:hello`
       '';
       iogWelcomeText = ''
-        You just created an haskell.nix template using flakes. Read more about it here:
+        You just created a haskell.nix template very similar to the current one that IOG is using with flakes. Read more about it here:
         https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
 
         Development shell available on `nix develop`
