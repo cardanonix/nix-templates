@@ -42,6 +42,15 @@
           '';
         };
 
+        plutus-starter = {
+          path = ./plutus-starter;
+          description = "A plutus template from Lovelace Academy using hix and haskell.nix";
+          welcomeText = ''
+            ${hsWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
         plutus_hix = {
           path = ./plutus_hix;
           description = "A plutus template from Lovelace Academy using hix and haskell.nix";

@@ -1,0 +1,36 @@
+name: "Tests"
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  nix-build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: nixbuild/nix-quick-install-action@v9
+        with:
+          nix_conf: |
+            allowed-uris = https://github.com/NixOS/nixpkgs https://github.com/input-output-hk https://github.com/NixOS/nixpkgs-channels
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo= loony-tools:pr9m4BkM/5/eSTZlkQyRt57Jz7OMBxNSUiMC4FkcNfk=
+            substituters = https://iohk.cachix.org https://cache.nixos.org/ https://cache.iog.io https://cache.zw3rk.com
+      - run: nix-build release.nix --restrict-eval -I . -A required --no-out-link
+
+  guessing-game:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - uses: nixbuild/nix-quick-install-action@v9
+        with:
+          nix_conf: |
+            allowed-uris = https://github.com/NixOS/nixpkgs https://github.com/input-output-hk https://github.com/NixOS/nixpkgs-channels
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo= loony-tools:pr9m4BkM/5/eSTZlkQyRt57Jz7OMBxNSUiMC4FkcNfk=
+            substituters = https://iohk.cachix.org https://cache.nixos.org/ https://cache.iog.io https://cache.zw3rk.com
+      - run: ./scripts/test
