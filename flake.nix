@@ -3,6 +3,12 @@
 
   outputs = { self }:
     let
+      starterWelcomeText = ''
+        You have succesfully created a new plutus starter project!
+        
+        Development shell available on `nix develop`
+        Build and run the project with `nix run .#hello:exe:hello`
+      '';
       iogWelcomeText = ''
         You just created an haskell.nix template using flakes. Read more about it here:
         https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
@@ -46,7 +52,7 @@
           path = ./plutus-starter;
           description = "A plutus template from Lovelace Academy using hix and haskell.nix";
           welcomeText = ''
-            ${hsWelcomeText}
+            ${starterWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
