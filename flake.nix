@@ -3,6 +3,13 @@
 
   outputs = { self }:
     let
+      iogWelcomeText = ''
+        You just created an haskell.nix template using flakes. Read more about it here:
+        https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
+
+        Development shell available on `nix develop`
+        Build and run the project with `nix run .#hello:exe:hello`
+      '';
       hsWelcomeText = ''
         You just created an haskell.nix template using hix. Read more about it here:
         https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
@@ -30,10 +37,20 @@
           path = ./plutus;
           description = "A plutus template using haskell.nix";
           welcomeText = ''
+            ${iogWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        plutus_hix = {
+          path = ./plutus_hix;
+          description = "A plutus template from Lovelace Academy using hix and haskell.nix";
+          welcomeText = ''
             ${hsWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
+        
         purs-nix = {
           path = ./purs-nix;
           description = "A purs-nix template";
