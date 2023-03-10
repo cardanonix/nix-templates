@@ -4,7 +4,6 @@
     nixpkgs.follows = "haskell-nix/nixpkgs-unstable";
     haskell-nix.url = "github:input-output-hk/haskell.nix";
     flake-utils.follows = "haskell-nix/flake-utils";
-    iohk-nix.url = "github:input-output-hk/iohk-nix";
     CHaP = {
       url = "github:input-output-hk/cardano-haskell-packages?ref=repo";
       flake = false;
