@@ -4,7 +4,7 @@
   outputs = { self }:
     let
       starterWelcomeText = ''
-        You have succesfully created a new plutus starter project!
+        You have succesfully created a new plutus starter project.
         
         Development shell available on `nix develop`
         Build and run the project with `nix run .#hello:exe:hello`
