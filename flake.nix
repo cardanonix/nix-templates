@@ -60,7 +60,16 @@
           path = ./plutus-starter;
           description = "A plutus template using haskell.nix";
           welcomeText = ''
-            ${starterWelcomeText}
+            ${iogWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        std-plutus = {
+          path = ./std-plutus;
+          description = "An experimental plutus template using haskell.nix";
+          welcomeText = ''
+            ${stdWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
