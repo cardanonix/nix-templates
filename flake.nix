@@ -56,18 +56,27 @@
           '';
         };
 
-        # plutus-starter = {
-        #   path = ./plutus-starter;
-        #   description = "A (currently broken) plutus template using haskell.nix";
-        #   welcomeText = ''
-        #     ${iogWelcomeText}
-        #     Plutus docs available with `nix run .#serve-docs`
-        #   '';
-        # };
+        plutus-starter = {
+          path = ./iog-plutus-starter;
+          description = "A flake-specifc, very bare-bones branch of the IOG plutus starter with working PAB";
+          welcomeText = ''
+            ${iogWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        gimbalabs-plutus-starter = {
+          path = ./gimbalabs-plutus-starter;
+          description = "A (currently broken) plutus template using haskell.nix the cabal file isn't connecting dependencies correctly";
+          welcomeText = ''
+            ${iogWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
 
         std-plutus = {
           path = ./std-plutus;
-          description = "An experimental plutus template using haskell.nix";
+          description = "A broken and experimental plutus template using paisano/std";
           welcomeText = ''
             ${stdWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
@@ -76,18 +85,9 @@
 
         hix-plutus = {
           path = ./hix-plutus;
-          description = "A plutus template from Lovelace Academy using hix and haskell.nix";
+          description = "A clean plutus template from Lovelace Academy using hix and haskell.nix";
           welcomeText = ''
             ${hsWelcomeText}
-            Plutus docs available with `nix run .#serve-docs`
-          '';
-        };
-
-        iog-plutus-starter = {
-          path = ./iog-plutus-starter;
-          description = "A flake specific specifc, very bare bones branch of the IOG plutus starter with working PAB";
-          welcomeText = ''
-            ${iogWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
