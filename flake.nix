@@ -67,12 +67,12 @@
           '';
         };
 
-        plutus-starter-repo = {
-          inherit plutus-starter;
-          # inputs.plutus-starter;
-          description = "template description goes here?";
-        };
-        # inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
+        # plutus-starter-repo = {
+        #   inherit plutus-starter;
+        #   # inputs.plutus-starter;
+        #   description = "template description goes here?";
+        # };
+        # # inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
 
         gimbalabs-plutus-starter = {
           path = ./gimbalabs-plutus-starter;
