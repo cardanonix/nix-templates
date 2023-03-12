@@ -64,7 +64,7 @@
           '';
         };
 
-        bizarro-plutus-starter  = with inputs; {
+        bizarro-plutus-starter  = {
           path = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999"; 
           description = "A flake-specifc, very bare-bones branch of the IOG plutus starter with working PAB";
           welcomeText = ''
