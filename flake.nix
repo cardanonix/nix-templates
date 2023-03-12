@@ -68,7 +68,7 @@
         };
 
         plutus-starter-repo = {
-          path = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999"; 
+          inherit plutus-starter;
           # inputs.plutus-starter;
           description = "template description goes here?";
         };
