@@ -71,8 +71,7 @@
           path = inputs.plutus-starter;
           description = "template description goes here?";
         };
-
-        # bizarro-plutus-starter  = inputs.plutus-starter;
+        # inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
 
         gimbalabs-plutus-starter = {
           path = ./gimbalabs-plutus-starter;
