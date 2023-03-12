@@ -66,7 +66,7 @@
         };
 
         bizarro-plutus-starter  = with inputs; {
-          path = import inputs.iog-test-input;
+          path = inputs.iog-test-input.plutus-starter;
           description = "A flake-specifc, very bare-bones branch of the IOG plutus starter with working PAB";
           welcomeText = ''
             ${iogWelcomeText}
