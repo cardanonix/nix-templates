@@ -68,7 +68,8 @@
         };
 
         plutus-starter-repo = {
-          path = inputs.plutus-starter;
+          path = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999"; 
+          # inputs.plutus-starter;
           description = "template description goes here?";
         };
         # inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
