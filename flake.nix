@@ -67,7 +67,12 @@
           '';
         };
 
-        bizarro-plutus-starter  = inputs.plutus-starter;
+        plutus-starter-repo = {
+          path = inputs.plutus-starter;
+          description = "template description goes here?";
+        };
+
+        # bizarro-plutus-starter  = inputs.plutus-starter;
 
         gimbalabs-plutus-starter = {
           path = ./gimbalabs-plutus-starter;
