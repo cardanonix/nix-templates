@@ -1,6 +1,6 @@
 {
   description = "Nix flake templates";
-  outputs = { self, inputs }:
+  outputs = { self }:
     let
       starterWelcomeText = ''
         You have succesfully created a new plutus starter project.
