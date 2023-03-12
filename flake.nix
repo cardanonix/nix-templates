@@ -1,6 +1,9 @@
 {
   description = "Nix flake templates";
-  outputs = { self }:
+
+  inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
+
+  outputs = { self, inputs, ... }:
     let
       starterWelcomeText = ''
         You have succesfully created a new plutus starter project.
@@ -64,14 +67,7 @@
           '';
         };
 
-        bizarro-plutus-starter  = {
-          input.bizarro-plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999"; 
-          description = "A flake-specifc, very bare-bones branch of the IOG plutus starter with working PAB";
-          welcomeText = ''
-            ${iogWelcomeText}
-            Plutus docs available with `nix run .#serve-docs`
-          '';
-        };
+        bizarro-plutus-starter  = inputs.plutus-starter;
 
         gimbalabs-plutus-starter = {
           path = ./gimbalabs-plutus-starter;
