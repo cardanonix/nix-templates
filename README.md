@@ -5,46 +5,38 @@
 Minimal reproducible nix flake templates (some not so minimal)
 
 ### Templates
-
+- [plutus-starter](./iog-plutus-starter): IOG's previous, WORKING plutus-starter template using flakes (nicolas/plutus-apps1.1 branch).
 ```bash
 nix flake init -t github:cardanonix/nix-templates#plutus-starter
 ```
-- [plutus-starter](./iog-plutus-starter): IOG's previous, WORKING plutus-starter template using flakes (nicolas/plutus-apps1.1 branch).
-
+- [std-plutus-starter](./std-plutus): A plutus starter template using std/paisano (work in progress)
 ```bash
 nix flake init -t github:cardanonix/nix-templates#std-plutus-starter
 ```
-- [std-plutus-starter](./std-plutus): A plutus starter template using std/paisano (work in progress)
-
+- [plutus](./plutus): A plutus template using haskell.nix  from LoveLace Academy
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#plutus
 ```
-- [plutus](./plutus): A plutus template using haskell.nix  from LoveLace Academy
-
+- [gimbalabs-plutus-starter](./gimbalabs-plutus-starter): A hybrid plutus starter template using haskell.nix (very much a work in progress)
 ```bash
 nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
 ```
-- [gimbalabs-plutus-starter](./gimbalabs-plutus-starter): A hybrid plutus starter template using haskell.nix (very much a work in progress)
-
+- [haskell-nix](./haskell-nix): A haskell.nix template using hix  from LoveLace Academy
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#haskell-nix
 ```
-- [haskell-nix](./haskell-nix): A haskell.nix template using hix  from LoveLace Academy
-
+- [purs-nix](./purs-nix): A purs-nix template from LoveLace Academy 
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#purs-nix
 ```
-- [purs-nix](./purs-nix): A purs-nix template from LoveLace Academy 
-
+- [ctl](./ctl): A minimal cardano-transaction-lib template using purs-nix from LoveLace Academy
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#ctl 
 ```
-- [ctl](./ctl): A minimal cardano-transaction-lib template using purs-nix from LoveLace Academy
-
+- [ctl-full](./ctl-full): A optioned cardano-transaction-lib template using purs-nix from LoveLace Academy
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#ctl-full 
 ```
-- [ctl-full](./ctl-full): A optioned cardano-transaction-lib template using purs-nix from LoveLace Academy
      
 
 ## FAQ
