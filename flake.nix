@@ -15,7 +15,7 @@
     flake-parts.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, inputs, ... }:
+  outputs = inputs@{ self, ... }:
     let
       starterWelcomeText = ''
         You have succesfully created a new plutus starter project.
