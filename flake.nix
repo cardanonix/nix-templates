@@ -1,5 +1,5 @@
 {
-  description = "Nix flake templates";
+  description = "Cardanonix Nix Flakes Templates";
 
   outputs = { self }:
     let
