@@ -7,7 +7,14 @@ Minimal reproducible nix flake templates
 ## Usage
 
 ```bash
-nix flake init -t github:LovelaceAcademy/nix-templates#template-name
+nix flake init -t github:cardanonix/nix-templates#plutus
+nix flake init -t github:cardanonix/nix-templates#std-plutus
+nix flake init -t github:cardanonix/nix-templates#hix-plutus
+nix flake init -t github:cardanonix/nix-templates#plutus-starter
+nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
+nix flake init -t github:cardanonix/nix-templates#haskell-nix
+nix flake init -t github:cardanonix/nix-templates#purs-nix
+nix flake init -t github:cardanonix/nix-templates#ctl 
 ```
 
 ### Templates
