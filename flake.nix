@@ -76,13 +76,13 @@
           '';
         };
 
-        mlabs-tooling = {
-          path = ./mlabs-tooling;
-          description = "a clone of mlbs tooling, accessible from this directory";
-          welcomeText = ''
-            ${mlabsWelcomeText}
-          '';
-        };
+        # mlabs-tooling = {
+        #   path = ./mlabs-tooling;
+        #   description = "a clone of mlbs tooling, accessible from this directory";
+        #   welcomeText = ''
+        #     ${mlabsWelcomeText}
+        #   '';
+        # };
 
         # plutus-starter-repo = {
         #   inherit plutus-starter;
