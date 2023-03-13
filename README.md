@@ -2,48 +2,60 @@
 
 [![Test](https://github.com/LovelaceAcademy/nix-templates/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/LovelaceAcademy/nix-templates/actions/workflows/test.yml?query=branch%3Amain)
 
-Minimal reproducible nix flake templates
-
-## Usage
-
-```bash
-nix flake init -t github:cardanonix/nix-templates#plutus
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#std-plutus
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#hix-plutus
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#plutus-starter
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#haskell-nix
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#purs-nix
-```
-```bash
-nix flake init -t github:cardanonix/nix-templates#ctl 
-```
+Minimal reproducible nix flake templates (some not so minimal)
 
 ### Templates
 
-- [haskell-nix](./haskell-nix): A haskell.nix template using hix
-- [plutus](./plutus): A plutus template using haskell.nix
-- [purs-nix](./purs-nix): A purs-nix template
-- [ctl](./ctl): A minimal cardano-transaction-lib template using purs-nix
-- [ctl-full](./ctl-full): A optioned cardano-transaction-lib template using purs-nix
+```bash
+nix flake init -t github:cardanonix/nix-templates#plutus-starter
+```
+- [plutus-starter](./iog-plutus-starter): IOG's previous, WORKING plutus-starter template using flakes (nicolas/plutus-apps1.1 branch).
+
+```bash
+nix flake init -t github:cardanonix/nix-templates#std-plutus-starter
+```
+- [std-plutus-starter](./std-plutus): A plutus starter template using std/paisano (work in progress)
+
+```bash
+nix flake init -t github:LovelaceAcademy/nix-templates#plutus
+```
+- [plutus](./plutus): A plutus template using haskell.nix  from LoveLace Academy
+
+```bash
+nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
+```
+- [gimbalabs-plutus-starter](./gimbalabs-plutus-starter): A hybrid plutus starter template using haskell.nix (very much a work in progress)
+
+```bash
+nix flake init -t github:LovelaceAcademy/nix-templates#haskell-nix
+```
+- [haskell-nix](./haskell-nix): A haskell.nix template using hix  from LoveLace Academy
+
+```bash
+nix flake init -t github:LovelaceAcademy/nix-templates#purs-nix
+```
+- [purs-nix](./purs-nix): A purs-nix template from LoveLace Academy 
+
+```bash
+nix flake init -t github:LovelaceAcademy/nix-templates#ctl 
+```
+- [ctl](./ctl): A minimal cardano-transaction-lib template using purs-nix from LoveLace Academy
+
+```bash
+nix flake init -t github:LovelaceAcademy/nix-templates#ctl-full 
+```
+- [ctl-full](./ctl-full): A optioned cardano-transaction-lib template using purs-nix from LoveLace Academy
+     
 
 ## FAQ
 
 ### Why the templates have `flake.lock` files?
 
 While I agree that storing lock files in templates is not ideal, there is no way to be sure the template is working if we do not store lock files. It's a trade-off, we prefer to have working templates than up-to-date dependencies. That said, we try to keep all templates here in sync with upstream / dependencies as far as possible.
+
+### Why do you have other people's files?
+
+Because I haven't figured out how to link my template to other flakes rather than just cloning them into my repo 🤙🏽.
 
 ### Will you support other systems?
 
