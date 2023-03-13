@@ -10,8 +10,9 @@
         Build and run the project with `nix run .#hello:exe:hello`
       '';
       iogWelcomeText = ''
-        You just created a haskell.nix template very similar to the current one that IOG is using with flakes. Read more about it here:
-        https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
+        You just created a haskell.nix template very similar to the current one that IOG is using with flakes. 
+        Read more about it here:
+        https://github.com/input-output-hk/plutus-starter/tree/nicolas/plutus-apps1.1
 
         Development shell available on `nix develop`
         Build and run the project with `nix run .#hello:exe:hello`
@@ -24,7 +25,7 @@
         Build and run the project with `nix run .#hello:exe:hello`
       '';
       stdWelcomeText = ''
-        You just created an experimental std/paisano plutus project. . Read more about it here:
+        You just created an experimental std/paisano plutus project. Read more about it here:
         https://github.com/divnix/std
 
         Development shell with `nix develop`
@@ -37,17 +38,6 @@
         Development shell with `nix develop`
         Build with `nix build`
       '';
-      # mlabsWelcomeText = ''
-      #   mlabs-tooling.nix (codename echidna)
-      #   A flake that provides everything necessary to set up a project within our scopes. 
-      #   This is also a place to come to if you're a library maintainer or have issues with a dependency.
-
-      #   Motivation:
-      #   Within MLabs we have a wide variety of projects that each depend on libraries that often are open source. 
-      #   There has been a decoupling between the downstream users and the library maintainers and between the different 
-      #   downstream users which impose some very serious issues that are endangering the success for certain 
-      #   projects and ultimately MLabs itself.
-      # '';
     in
     {
       templates = {
@@ -75,21 +65,6 @@
             Plutus docs available with `nix run .#serve-docs`
           '';
         };
-
-        # mlabs-tooling = {
-        #   path = ./mlabs-tooling;
-        #   description = "a clone of mlbs tooling, accessible from this directory";
-        #   welcomeText = ''
-        #     ${mlabsWelcomeText}
-        #   '';
-        # };
-
-        # plutus-starter-repo = {
-        #   inherit plutus-starter;
-        #   # inputs.plutus-starter;
-        #   description = "template description goes here?";
-        # };
-        # # inputs.plutus-starter.url = "github:input-output-hk/plutus-starter?rev=d077a79559bace5a6c79744ff01e90cae803b999";
 
         gimbalabs-plutus-starter = {
           path = ./gimbalabs-plutus-starter;
