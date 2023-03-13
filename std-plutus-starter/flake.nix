@@ -10,7 +10,7 @@
 # You may want to refer to the standard glossary as you go along:
 # https://divnix.github.io/std/glossary.html
 {
-  description = "Plutus Core";
+  description = "Plutus Starter (updating to std)";
 
   inputs = {
     nixpkgs = {
@@ -37,6 +37,10 @@
     };
     sphinxcontrib-haddock = {
       url = "github:michaelpj/sphinxcontrib-haddock";
+      flake = false;
+    };
+    plutus = {
+      url = "github:input-output-hk/plutus?ref=3eaed2b55ea2a4f151d6a3b5bc38c4b1c81263c7";
       flake = false;
     };
     gitignore-nix = {
@@ -126,12 +130,12 @@
         # Here we say that we want the "devshells" cell block of the plutus cell
         # (which contains a number of shell-able derivations) to be exposed
         # by the flake and accessible via nix develop.
-        devShells = inputs.std.harvest inputs.self [ "std-plutus" "devshells" ];
+        devShells = inputs.std.harvest inputs.self [ "plutus" "devshells" ];
 
         # Here we say that we want the "packages" cell block of the plutus cell
         # (which contains a number of buildable derivations) to be exposed
         # by the flake and accessible via nix build (or nix run).
-        packages = inputs.std.harvest inputs.self [ "std-plutus" "packages" ];
+        packages = inputs.std.harvest inputs.self [ "plutus" "packages" ];
       }
       {
         hydraJobs = inputs.std.harvest inputs.self [ "automation" "ciJobs" ];
