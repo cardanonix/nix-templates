@@ -1,21 +1,7 @@
 {
   description = "Nix flake templates";
 
-  inputs = {
-    haskell-nix.url = "github:input-output-hk/haskell.nix";
-    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
-    cardano-haskell-packages.url = "github:input-output-hk/cardano-haskell-packages?ref=repo";
-    cardano-haskell-packages.flake = false;
-    iohk-nix.url = "github:input-output-hk/iohk-nix";
-    iohk-nix.flake = false;
-    emanote.url = "github:srid/emanote/master";
-    emanote.inputs.nixpkgs.follows = "nixpkgs";
-    plutus.url = "github:input-output-hk/plutus";
-    flake-parts.url = "github:mlabs-haskell/flake-parts?ref=fix-for-ifd";
-    flake-parts.inputs.nixpkgs.follows = "nixpkgs";
-  };
-
-  outputs = inputs@{ self, ... }:
+  outputs = { self, ... }:
     let
       starterWelcomeText = ''
         You have succesfully created a new plutus starter project.
