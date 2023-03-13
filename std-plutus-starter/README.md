@@ -2,7 +2,7 @@
 ![CI](https://github.com/input-output-hk/plutus-starter/actions/workflows/test.yml/badge.svg?branch=main)
 
 
-This project gives a simple starter project for using the Plutus Platform.
+This project gives a simple Plutus Starter (updated to std/paisano).
 
 ## Setting up
 
