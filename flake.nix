@@ -39,6 +39,17 @@
         Development shell with `nix develop`
         Build with `nix build`
       '';
+      mlabsWelcomeText = ''
+        mlabs-tooling.nix (codename echidna)
+        A flake that provides everything necessary to set up a project within our scopes. 
+        This is also a place to come to if you're a library maintainer or have issues with a dependency.
+
+        Motivation:
+        Within MLabs we have a wide variety of projects that each depend on libraries that often are open source. 
+        There has been a decoupling between the downstream users and the library maintainers and between the different 
+        downstream users which impose some very serious issues that are endangering the success for certain 
+        projects and ultimately MLabs itself.
+      '';
     in
     {
       templates = {
@@ -64,6 +75,14 @@
           welcomeText = ''
             ${iogWelcomeText}
             Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        mlabs-tooling = {
+          path = ./mlabs-tooling;
+          description = "a clone of mlbs tooling, accessible from this directory";
+          welcomeText = ''
+            ${mlabsWelcomeText}
           '';
         };
 
