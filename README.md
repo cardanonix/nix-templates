@@ -8,12 +8,26 @@ Minimal reproducible nix flake templates
 
 ```bash
 nix flake init -t github:cardanonix/nix-templates#plutus
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#std-plutus
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#hix-plutus
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#plutus-starter
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#haskell-nix
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#purs-nix
+```
+```bash
 nix flake init -t github:cardanonix/nix-templates#ctl 
 ```
 
