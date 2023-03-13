@@ -48,15 +48,6 @@
           welcomeText = hsWelcomeText;
         };
 
-        plutus = {
-          path = ./plutus;
-          description = "A plutus template using haskell.nix";
-          welcomeText = ''
-            ${iogWelcomeText}
-            Plutus docs available with `nix run .#serve-docs`
-          '';
-        };
-
         plutus-starter = {
           path = ./iog-plutus-starter;
           description = "A flake-specifc, very bare-bones branch of the IOG plutus starter with working PAB";
