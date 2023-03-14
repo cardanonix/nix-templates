@@ -10,7 +10,7 @@
 # You may want to refer to the standard glossary as you go along:
 # https://divnix.github.io/std/glossary.html
 {
-  description = "Plutus Starter (updating to std)";
+  description = "Plutus Core";
 
   inputs = {
     nixpkgs = {
@@ -37,10 +37,6 @@
     };
     sphinxcontrib-haddock = {
       url = "github:michaelpj/sphinxcontrib-haddock";
-      flake = false;
-    };
-    plutus = {
-      url = "github:input-output-hk/plutus?ref=3eaed2b55ea2a4f151d6a3b5bc38c4b1c81263c7";
       flake = false;
     };
     gitignore-nix = {

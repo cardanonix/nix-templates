@@ -1,11 +1,6 @@
-{
-  description = "A very basic flake";
+    plutus = {
+      url = "github:input-output-hk/plutus?ref=b94d0e001c8f7350b5120b20cbc9d9021d377a8a";
+      flake = false;
+    };
 
-  outputs = { self, nixpkgs }: {
-
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
-    packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
-  };
-}
+    
