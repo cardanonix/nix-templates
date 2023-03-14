@@ -88,7 +88,7 @@
         };
 
         std-plutus = {
-          path = ./std-plutus;
+          path = ./std-plutus-starter;
           description = "A broken and experimental plutus template using paisano/std";
           welcomeText = ''
             ${stdWelcomeText}
