@@ -21,7 +21,7 @@ nix flake init -t github:LovelaceAcademy/nix-templates#plutus
 ```bash
 nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
 ```
-- [gimbalabs-plutus-starter](./mlabs-tooling): A flake from mlabs to get their tooling working in one place. (Uses "flake-parts")
+- [mlabs-tooling](./mlabs-tooling): A flake from mlabs to get their tooling working in one place. (Uses "flake-parts")
 ```bash
 nix flake init -t github:cardanonix/nix-templates#mlabs-tooling
 ```
