@@ -21,6 +21,11 @@ nix flake init -t github:LovelaceAcademy/nix-templates#plutus
 ```bash
 nix flake init -t github:cardanonix/nix-templates#gimbalabs-plutus-starter
 ```
+- [gimbalabs-plutus-starter](./mlabs-tooling): A flake from mlabs to get their tooling working in one place. (Uses "flake-parts")
+```bash
+nix flake init -t github:cardanonix/nix-templates#mlabs-tooling
+```
+
 - [haskell-nix](./haskell-nix): A haskell.nix template using hix  from LoveLace Academy
 ```bash
 nix flake init -t github:LovelaceAcademy/nix-templates#haskell-nix
