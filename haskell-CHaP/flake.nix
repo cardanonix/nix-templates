@@ -41,7 +41,7 @@
           };
 
           shell.tools = {
-            cabal.version = "latest";
+            cabal = "latest";
             hlint.version = "3.4.1";
             haskell-language-server.version = "1.8.0.0";
           };
@@ -50,11 +50,11 @@
             {
               packages = {
                 # Broken due to haddock errors. Refer to https://github.com/input-output-hk/plutus/blob/master/nix/pkgs/haskell/haskell.nix
-                plutus-ledger.doHaddock = false;
-                plutus-use-cases.doHaddock = false;
+                # plutus-ledger.doHaddock = false;
+                # plutus-use-cases.doHaddock = false;
 
-                cardano-crypto-praos.components.library.pkgconfig = lib.mkForce [ [ pkgs.libsodium-vrf pkgs.secp256k1 ] ];
-                cardano-crypto-class.components.library.pkgconfig = lib.mkForce [ [ pkgs.libsodium-vrf pkgs.secp256k1 ] ];
+                # cardano-crypto-praos.components.library.pkgconfig = lib.mkForce [ [ pkgs.libsodium-vrf pkgs.secp256k1 ] ];
+                # cardano-crypto-class.components.library.pkgconfig = lib.mkForce [ [ pkgs.libsodium-vrf pkgs.secp256k1 ] ];
               };
             }
           ];
