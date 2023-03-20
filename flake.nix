@@ -38,6 +38,13 @@
         Development shell with `nix develop`
         Build with `nix build`
       '';
+      chapWelcomeText = ''
+        You just created an haskell.nix template using CHaP. Read more about it here:
+        https://input-output-hk.github.io/haskell.nix/tutorials/getting-started-flakes.html
+
+        Development shell available on `nix develop`
+        Build and run the project with `nix run .#hello:exe:hello`
+      '';
       mlabsWelcomeText = ''
         mlabs-tooling.nix (codename echidna)
         A flake that provides everything necessary to set up a project within our scopes. 
@@ -58,6 +65,12 @@
         haskell-nix = {
           path = ./haskell-nix;
           description = "A haskell.nix template using hix";
+          welcomeText = hsWelcomeText;
+        };
+
+        haskell-CHaP = {
+          path = ./haskell-ChaP;
+          description = "A haskell.nix template using IOG's Cardano Haskell Packages";
           welcomeText = hsWelcomeText;
         };
 
