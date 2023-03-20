@@ -71,7 +71,7 @@
         haskell-CHaP = {
           path = ./haskell-ChaP;
           description = "A haskell.nix template using IOG's Cardano Haskell Packages";
-          welcomeText = hsWelcomeText;
+          welcomeText = chapWelcomeText;
         };
 
         plutus-starter = {
