@@ -68,7 +68,7 @@
           welcomeText = hsWelcomeText;
         };
 
-        haskell-chap = {
+        haskell-CHaP = {
           path = ./haskell-ChaP;
           description = "A haskell.nix template using IOG's Cardano Haskell Packages";
           welcomeText = ''
