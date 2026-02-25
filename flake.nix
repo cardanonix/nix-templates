@@ -41,6 +41,33 @@
           welcomeText = haskWelcomeText;
         };
 
+        purescript-haskell-postges = {
+          path = ./iogx-plutus;
+          description = "A plutus template using iogx";
+          welcomeText = ''
+            ${iogxWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        haskell-postges = {
+          path = ./haskell-postges;
+          description = "A plutus template using iogx";
+          welcomeText = ''
+            ${iogxWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
+        generic = {
+          path = ./iogx-plutus;
+          description = "A plutus template using iogx";
+          welcomeText = ''
+            ${iogxWelcomeText}
+            Plutus docs available with `nix run .#serve-docs`
+          '';
+        };
+
         iogx = {
           path = ./iogx;
           description = "A haskell.nix template using iogx";
